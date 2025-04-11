@@ -10,14 +10,14 @@ function SchoolProject() {
       image: academic,
     },
     {
-      title: 'Student Attendance Tracker',
-      description: 'A web app to track student attendance and generate reports.',
+      title: 'cooming soon',
+      description: '...',
       link: '#',
       image: 'https://via.placeholder.com/300x200',
     },
     {
-      title: 'Online Quiz System',
-      description: 'An interactive platform for conducting online quizzes and assessments.',
+      title: 'cooming soon',
+      description: '..',
       link: '#',
       image: 'https://via.placeholder.com/300x200',
     },
