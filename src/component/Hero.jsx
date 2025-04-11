@@ -10,7 +10,7 @@ function Hero() {
 
   useEffect(() => {
     const options = {
-      strings: ["Biniyam Gossa", "a Web Developer", "a Frontend Enthusiast", "a Problem Solver", "a Continuous Learner"],
+      strings: ["Biniyam Gossa", "a Web Developer", "AI Specialist",  "a Continuous Learner"],
       typeSpeed: 70,
       backSpeed: 50,
       loop: true,
@@ -107,12 +107,8 @@ function Hero() {
           </p>
           <p className="text-md md:text-md text-gray-400 mb-6 text-left">
             Specialized in <span className="text-teal-400">Frontend Development</span> using modern tools like
-            <span className="text-teal-400"> React</span>, <span className="text-teal-400">Tailwind CSS</span>, and
-            <span className="text-teal-400"> JavaScript</span>. I'm also deeply interested in
-            <span className="text-teal-400"> Performance Optimization</span> and
-            <span className="text-teal-400"> Accessibility</span>. I'm a
-            <span className="text-teal-400"> Problem Solver</span> and enjoy tackling complex challenges.
-            I believe that continuous learning is crucial in this field, and I'm always eager to explore new technologies.
+            <span className="text-teal-400"> React</span>, <span className="text-teal-400">Tailwind CSS</span>,
+            I believe that continuous learning is crucial in this field, and I'm always Learning
           </p>
           <div className="space-x-4">
             <motion.a
