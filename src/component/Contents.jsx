@@ -12,19 +12,22 @@ function ShowInfo() {
 
   const projects = [
     {
-      title: 'Coming soon',
-      description: '..',
+      title: 'Library Management System',
+      description: 'A system to manage library books, members, and borrowing records.',
       link: '#',
+      image: 'https://via.placeholder.com/300x200',
     },
     {
-      title: 'Coming soon',
-      description: '..',
+      title: 'Student Attendance Tracker',
+      description: 'A web app to track student attendance and generate reports.',
       link: '#',
+      image: 'https://via.placeholder.com/300x200', 
     },
     {
-      title: 'Coming soon',
-      description: '..',
+      title: 'Online Quiz System',
+      description: 'An interactive platform for conducting online quizzes and assessments.',
       link: '#',
+      image: 'https://via.placeholder.com/300x200', 
     },
   ];
 
@@ -64,6 +67,11 @@ function ShowInfo() {
               className="bg-gradient-to-br from-gray-800 to-gray-700 shadow-md rounded-lg p-6 hover:shadow-lg transition-transform duration-300"
               whileHover={{ scale: 1.05 }}
             >
+              <img
+                src={project.image}
+                alt={project.title}
+                className="w-full h-40 object-cover rounded-md mb-4"
+              />
               <h3 className="text-xl font-semibold text-teal-400 mb-2">{project.title}</h3>
               <p className="text-gray-300 mb-4">{project.description}</p>
               <span className="text-teal-400 font-medium hover:underline">
