@@ -11,7 +11,29 @@ function ShowInfo() {
     { name: 'CSS', icon: '🎨', link: 'https://developer.mozilla.org/en-US/docs/Web/CSS' },
   ];
 
+  const schoolProjects = [
+    {
+      title: 'Hammer Car Dealership Web System',
+      description: 'A system to sell and rent cars.',
+      link: 'https://hammer-car.vercel.app/',
+      image: academic,
+    },
+    {
+      title: 'Coming Soon',
+      description: '............................',
+      link: '#',
+      image: 'https://via.placeholder.com/300x200',
+    },
+    {
+      title: 'Coming Soon',
+      description: '.................',
+      link: '#',
+      image: 'https://via.placeholder.com/300x200',
+    },
+  ];
+
   return (
+    <>
     <div className="bg-gray-900 text-white py-4">
       {/* Skills Section */}
       <h2 className="text-3xl font-bold text-center mb-8 text-teal-400">My Skills</h2>
@@ -32,32 +54,10 @@ function ShowInfo() {
         ))}
       </div>
     </div>
-  );
-}
+ 
 
-function SchoolProject() {
-  const schoolProjects = [
-    {
-      title: 'Hammer Car Dealership Web System',
-      description: 'A system to sell and rent cars.',
-      link: 'https://hammer-car.vercel.app/',
-      image: academic,
-    },
-    {
-      title: 'Coming Soon',
-      description: '...',
-      link: '#',
-      image: 'https://via.placeholder.com/300x200',
-    },
-    {
-      title: 'Coming Soon',
-      description: '..',
-      link: '#',
-      image: 'https://via.placeholder.com/300x200',
-    },
-  ];
+ {/* schoolProjects */}
 
-  return (
     <div className="bg-gray-900 text-white py-10">
       <h2 className="text-3xl font-bold text-center mb-8 text-teal-400">Academic Projects</h2>
       <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 px-4">
@@ -67,7 +67,7 @@ function SchoolProject() {
             href={project.link}
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-gray-800 shadow-md rounded-lg p-6 hover:shadow-lg transition"
+            className="bg-gray-800 shadow-md rounded-lg p-6 hover:shadow-lg transition flex flex-col justify-between h-full"
           >
             <img
               src={project.image}
@@ -76,9 +76,10 @@ function SchoolProject() {
             />
             <h3 className="text-xl font-semibold text-teal-400 mb-2">{project.title}</h3>
             <p className="text-gray-300 mb-4">{project.description}</p>
-            <div className="flex justify-end h-fit">
+
+            <div className="flex justify-end ">
               <span
-                className="font-medium text-white hover:underline bg-pink-700 px-4 py-2 rounded-lg shadow-lg hover:shadow-pink-500/50 transition-all duration-300 w-fit ml-auto animate-pulse hover:animate-none"
+                className="font-medium text-white hover:underline bg-pink-700 px-4 py-2 rounded-lg shadow-lg hover:shadow-pink-500/50 transition-all duration-300 w-fit animate-pulse hover:animate-none"
               >
                 View Project
               </span>
@@ -87,14 +88,8 @@ function SchoolProject() {
         ))}
       </div>
     </div>
+ </>
   );
 }
 
-export default function Contents() {
-  return (
-    <>
-      <ShowInfo />
-      <SchoolProject />
-    </>
-  );
-}
+export default ShowInfo
