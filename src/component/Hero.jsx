@@ -78,7 +78,7 @@ function Hero() {
   };
 
   return (
-    <section className="h-screen flex items-center justify-center relative overflow-hidden bg-gray-800">
+    <section className="h-fit pb-2 flex items-center justify-center relative overflow-hidden bg-gray-800">
       <Particles
         id="tsparticles"
         init={particlesInit}
