@@ -232,7 +232,7 @@ function Hero() {
             </p>
             <div className="space-x-4">
               <motion.a
-                href="#projects"
+                
                 className="bg-teal-400 text-gray-900 px-5 py-2 rounded-lg font-medium hover:bg-teal-500 transition text-sm md:text-base"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
