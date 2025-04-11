@@ -1,14 +1,16 @@
 import React, { useRef, useEffect, useState } from 'react';
 import profile from '../assets/profile.jpg';
-import documentPhoto from '../assets/doc.jpg'; // Add your document photo here
+import documentPhoto from '../assets/doc.jpg';
 import Typed from 'typed.js';
 import { motion } from 'framer-motion';
 import Particles from 'react-tsparticles';
 import { loadFull } from 'tsparticles';
+import { FaTelegram, FaInstagram, FaFacebook, FaTiktok, FaPhone, FaMapMarkerAlt } from 'react-icons/fa'; // Import icons
 
 function Hero() {
   const [isZoomed, setIsZoomed] = useState(false);
-  const [showDocument, setShowDocument] = useState(false); // State to toggle document photo
+  const [showDocument, setShowDocument] = useState(false);
+  const [showContact, setShowContact] = useState(false);
   const typedRef = useRef(null);
 
   useEffect(() => {
@@ -88,6 +90,10 @@ function Hero() {
     setShowDocument(!showDocument);
   };
 
+  const handleContactClick = () => {
+    setShowContact(!showContact);
+  };
+
   return (
     <>
       {isZoomed && (
@@ -112,6 +118,79 @@ function Hero() {
             src={documentPhoto}
             alt="Document"
           />
+        </div>
+      )}
+      {showContact && (
+        <div
+          className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50"
+          onClick={handleContactClick}
+        >
+          <div
+            className="bg-gray-900 text-white p-6 rounded-lg shadow-lg max-w-md w-full"
+            onClick={(e) => e.stopPropagation()} // Prevent closing when clicking inside the card
+          >
+            <h2 className="text-2xl font-bold mb-4 text-teal-400">Contact Me</h2>
+            <ul className="space-y-3">
+              <li>
+                <FaTelegram className="inline-block mr-2 text-blue-500" />
+                <a
+                  href="http://t.me/Biniyam05"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-teal-400 hover:underline"
+                >
+                  Telegram
+                </a>
+              </li>
+              <li>
+                <FaInstagram className="inline-block mr-2 text-pink-500" />
+                <a
+                  href="https://www.instagram.com/biniyamgossa?utm_source=qr&igsh=Z2ZtMWZuaThudW83"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-teal-400 hover:underline"
+                >
+                  Instagram
+                </a>
+              </li>
+              <li>
+                <FaFacebook className="inline-block mr-2 text-blue-800" />
+                <a
+                  href="https://www.facebook.com/biniyam.gossa.5"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-teal-400 hover:underline"
+                >
+                  Facebook
+                </a>
+              </li>
+              <li>
+                <FaTiktok className="inline-block mr-2 text-black" />
+                <a
+                  href="https://www.tiktok.com/@biniyamgossa?_t=ZM-8vRlBuZPJ4P&_r=1"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-teal-400 hover:underline"
+                >
+                  TikTok
+                </a>
+              </li>
+              <li>
+                <FaPhone className="inline-block mr-2 text-green-500" />
+                <span className="text-teal-400">+123 456 7890</span>
+              </li>
+              <li>
+                <FaMapMarkerAlt className="inline-block mr-2 text-red-500" />
+                <span className="text-teal-400">Lafto, Addis Ababa, Ethiopia</span>
+              </li>
+            </ul>
+            <button
+              className="mt-4 bg-teal-400 text-gray-900 px-4 py-2 rounded-lg font-medium hover:bg-teal-500 transition"
+              onClick={handleContactClick}
+            >
+              Close
+            </button>
+          </div>
         </div>
       )}
       <section className="h-fit pb-2 flex items-center justify-center relative overflow-hidden bg-gray-800">
@@ -157,14 +236,14 @@ function Hero() {
               >
                 View Projects
               </motion.a>
-              <motion.a
-                href="#contact"
+              <motion.button
+                onClick={handleContactClick}
                 className="border border-teal-400 text-teal-400 px-5 py-2 rounded-lg font-medium hover:bg-teal-400 hover:text-gray-900 transition text-sm md:text-base"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
                 Contact Me
-              </motion.a>
+              </motion.button>
               <motion.button
                 onClick={handleDocumentClick}
                 className="bg-gray-700 text-teal-400 px-5 py-2 rounded-lg font-medium hover:bg-gray-600 transition text-sm md:text-base"
