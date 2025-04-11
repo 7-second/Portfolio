@@ -253,7 +253,7 @@ function Hero() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                Show Document
+                Show Legal Document
               </motion.button>
             </div>
           </div>
