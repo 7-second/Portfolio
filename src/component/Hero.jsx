@@ -177,7 +177,7 @@ function Hero() {
               </li>
               <li>
                 <FaPhone className="inline-block mr-2 text-green-500" />
-                <span className="text-teal-400">+123 456 7890</span>
+                <span className="text-teal-400">+soon</span>
               </li>
               <li>
                 <FaMapMarkerAlt className="inline-block mr-2 text-red-500" />
