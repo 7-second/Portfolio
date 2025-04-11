@@ -4,8 +4,8 @@ import academic from '../assets/Academy project/Capture.png';
 function SchoolProject() {
   const schoolProjects = [
     {
-      title: 'Library Management System',
-      description: 'A system to manage library books, members, and borrowing records.',
+      title: 'Hammer car delership web System',
+      description: 'A system to To sell And Rent Cars.',
       link: '#',
       image: academic,
     },
