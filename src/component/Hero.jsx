@@ -176,8 +176,11 @@ function Hero() {
                 </a>
               </li>
               <li>
+                <a href="tel:+2510985...." className="text-teal-400 hover:underline">
                 <FaPhone className="inline-block mr-2 text-green-500" />
-                <span className="text-teal-400">+soon</span>
+                <span className="text-teal-400" type="phone">+251985.....</span>
+                </a>
+                
               </li>
               <li>
                 <FaMapMarkerAlt className="inline-block mr-2 text-red-500" />
