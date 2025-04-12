@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import academic from '../assets/Academy project/Capture.png'; // Ensure the image path is correct
+import academic from '../assets/Academy project/Capture.png'; 
+import food from '../assets/Academy project/food.png'; 
 
 function ShowInfo() {
   const skills = [
@@ -19,10 +20,10 @@ function ShowInfo() {
       image: academic,
     },
     {
-      title: 'Coming Soon',
-      description: '............................',
-      link: '#',
-      image: 'https://via.placeholder.com/300x200',
+      title: 'B-foods ',
+      description: 'onlne food ordering system',
+      link: 'https://b-food.vercel.app/',
+      image: food,
     },
     {
       title: 'Coming Soon',
