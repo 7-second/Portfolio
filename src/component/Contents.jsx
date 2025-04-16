@@ -16,15 +16,15 @@ function ShowInfo() {
 
   const personalProjects = [
     {
-      title: 'Personal Project 1',
-      description: 'Description of personal project 1.',
+      title: 'B-Movie :  (Movie Web App)',
+      description: "Let's watch and enjoy together🥰",
       link: 'https://b-moviee.vercel.app/', // Replace with your project link
       image: p1 , // Replace with the actual image path
       status: 'developing', // Add a status property
     },
     {
       title: 'Personal Project 2 comming soon...',
-      description: 'Description of personal project 2.',
+      description: 'comming soon project 2.',
       link: '#', // Keep it as '#' or a relevant placeholder
       image: "https://media.istockphoto.com/id/1411798446/vector/modern-coming-soon-under-construction-sticker-banner.jpg?s=612x612&w=0&k=20&c=KgQ9eYEfuzTdmc5ypmMYoz8JHPTbe_TjEXxyxNixKQ4=", // Replace with the actual image path
       status: 'coming-soon', // Add a status property
