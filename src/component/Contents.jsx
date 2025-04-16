@@ -20,7 +20,7 @@ function ShowInfo() {
       description: "Let's watch and enjoy together🥰",
       link: 'https://b-moviee.vercel.app/', // Replace with your project link
       image: p1 , // Replace with the actual image path
-      status: 'developing', // Add a status property
+      status: 'Not Done!!!', // Add a status property
     },
     {
       title: 'Personal Project 2 comming soon...',
