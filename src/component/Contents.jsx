@@ -16,15 +16,15 @@ function ShowInfo() {
 
   const personalProjects = [
     {
-      title: 'B-Movie :  (Movie Web App)',
+      title: 'B-Movie : (Movie Web App)',
       description: "Let's watch and enjoy together🥰",
       link: 'https://b-moviee.vercel.app/', // Replace with your project link
       image: p1 , // Replace with the actual image path
-      status: 'Not Done!!!', // Add a status property
+      status: 'not finished', // Changed status here
     },
     {
-      title: 'Personal Project 2 comming soon...',
-      description: 'comming soon project 2.',
+      title: 'Personal Project 2 coming soon...',
+      description: 'coming soon project 2.',
       link: '#', // Keep it as '#' or a relevant placeholder
       image: "https://media.istockphoto.com/id/1411798446/vector/modern-coming-soon-under-construction-sticker-banner.jpg?s=612x612&w=0&k=20&c=KgQ9eYEfuzTdmc5ypmMYoz8JHPTbe_TjEXxyxNixKQ4=", // Replace with the actual image path
       status: 'coming-soon', // Add a status property
@@ -41,7 +41,7 @@ function ShowInfo() {
     },
     {
       title: 'B-foods ',
-      description: 'onlne food ordering system',
+      description: 'online food ordering system',
       link: 'https://b-food.vercel.app/',
       image: food,
     },
@@ -86,7 +86,7 @@ function ShowInfo() {
               href={project.link}
               target="_blank"
               rel="noopener noreferrer"
-              className={`bg-gray-800 shadow-md rounded-lg p-6 flex flex-col justify-between h-full hover:scale-105 transition-transform duration-300 ${project.status === 'developing' ? 'border-l-4 border-yellow-500' : ''} ${project.status === 'coming-soon' ? 'border-l-4 border-gray-500' : ''}`}
+              className={`bg-gray-800 shadow-md rounded-lg p-6 flex flex-col justify-between h-full hover:scale-105 transition-transform duration-300 ${project.status === 'developing' ? 'border-l-4 border-yellow-500' : ''} ${project.status === 'coming-soon' ? 'border-l-4 border-gray-500' : ''} ${project.status === 'not finished' ? 'border-l-4 border-orange-500' : ''}`}
               whileHover={{ boxShadow: "0px 5px 15px rgba(0, 0, 0, 0.3)" }}
             >
               <div className="relative">
@@ -105,13 +105,18 @@ function ShowInfo() {
                     Coming Soon
                   </div>
                 )}
+                {project.status === 'not finished' && (
+                  <div className="absolute top-2 left-2 bg-orange-500 text-white text-xs font-semibold rounded-md px-2 py-1">
+                    Not Finished
+                  </div>
+                )}
               </div>
               <h3 className="text-xl font-semibold text-pink-500 mb-2">{project.title}</h3>
               <p className="text-gray-300 mb-4">{project.description}</p>
 
               <div className="flex justify-end ">
                 <span
-                  className={`font-medium text-white hover:underline ${project.status === 'developing' ? 'bg-yellow-600 hover:shadow-yellow-500/50' : (project.status === 'coming-soon' ? 'bg-gray-600 hover:shadow-gray-500/50 cursor-not-allowed' : 'bg-purple-700 hover:shadow-purple-500/50')} px-4 py-2 rounded-lg shadow-lg transition-all duration-300 w-fit ${project.status !== 'coming-soon' ? 'animate-pulse hover:animate-none' : ''}`}
+                  className={`font-medium text-white hover:underline ${project.status === 'developing' ? 'bg-yellow-600 hover:shadow-yellow-500/50' : (project.status === 'coming-soon' ? 'bg-gray-600 hover:shadow-gray-500/50 cursor-not-allowed' : (project.status === 'not finished' ? 'bg-orange-600 hover:shadow-orange-500/50' : 'bg-purple-700 hover:shadow-purple-500/50'))} px-4 py-2 rounded-lg shadow-lg transition-all duration-300 w-fit ${project.status !== 'coming-soon' ? 'animate-pulse hover:animate-none' : ''} ${project.status === 'not finished' ? 'cursor-not-allowed' : ''}`}
                 >
                   View Project
                 </span>
